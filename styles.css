@@ -1,0 +1,348 @@
+/* أنماط عامة */
+body {
+    font-family: 'Tajawal', sans-serif;
+    background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+    direction: rtl;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 20px;
+    font-size: 32px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* أنماط الأزرار */
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* أنماط الجدول */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 8px;
+    overflow-x: auto; /* التمرير الأفقي عند الحاجة */
+    display: block; /* لجعل الجدول قابل للتمرير */
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    white-space: nowrap; /* منع النص من الانتقال لسطر جديد */
+}
+
+th {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* أنماط الحقول النصية والقوائم المنسدلة */
+input[type="text"], select {
+    padding: 10px;
+    width: 90%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus, select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* أنماط التحكم في الكمية */
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity-controls button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    background: linear-gradient(135deg, #28a745, #218838);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quantity-controls button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.quantity-input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+/* أنماط الوضع الليلي */
+.dark-mode {
+    background-color: #121212; /* خلفية داكنة */
+    color: #e0e0e0; /* نص فاتح */
+}
+
+.dark-mode .container {
+    background-color: #1e1e1e; /* خلفية داكنة للعناصر */
+    border: 1px solid #333; /* حدود داكنة */
+}
+
+.dark-mode table {
+    background-color: #2a2a2a; /* خلفية داكنة للجدول */
+    border-color: #444; /* حدود داكنة */
+}
+
+.dark-mode th {
+    background-color: #333; /* خلفية داكنة لرأس الجدول */
+    color: #ffffff; /* نص أبيض */
+}
+
+.dark-mode tr:nth-child(even) {
+    background-color: #2a2a2a; /* خلفية داكنة للصفوف الزوجية */
+}
+
+.dark-mode tr:hover {
+    background-color: #3a3a3a; /* خلفية داكنة عند التمرير */
+}
+
+.dark-mode input[type="text"], .dark-mode select {
+    background-color: #333; /* خلفية داكنة للحقول */
+    color: #e0e0e0; /* نص فاتح */
+    border-color: #444; /* حدود داكنة */
+}
+
+.dark-mode input[type="text"]:focus, .dark-mode select:focus {
+    border-color: #007bff; /* لون الحدود عند التركيز */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* ظل عند التركيز */
+}
+
+.dark-mode .floating-btn {
+    background-color: #444; /* خلفية داكنة للأزرار العائمة */
+    color: #ffffff; /* نص أبيض */
+}
+
+.dark-mode .floating-btn:hover {
+    background-color: #555; /* خلفية داكنة عند التمرير */
+}
+
+.dark-mode .notification {
+    background-color: #28a745; /* لون الإشعارات في الوضع الليلي */
+    color: #ffffff; /* نص أبيض */
+}
+
+/* أنماط زر التبديل بين الوضع الليلي والنهاري */
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 1000;
+}
+
+.dark-mode-toggle:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+.dark-mode-toggle i {
+    font-size: 20px;
+}
+
+/* أنماط الأزرار العائمة */
+.floating-btn {
+    position: fixed;
+    bottom: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.floating-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.copy-btn {
+    right: 20px;
+    background: linear-gradient(135deg, #28a745, #218838);
+}
+
+.add-btn {
+    left: 20px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+}
+
+/* أنماط الإشعارات */
+.notification {
+    position: fixed;
+    top: 20px; /* تغيير الموضع إلى أعلى الصفحة */
+    left: 50%; /* توسيط الإشعار */
+    transform: translateX(-50%); /* توسيط الإشعار */
+    background: linear-gradient(135deg, #28a745, #218838);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.5s ease-out;
+    z-index: 1000;
+    max-width: 90%; /* تقليل العرض على الجوالات */
+    text-align: center; /* توسيط النص */
+}
+
+.notification.danger {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+}
+
+.notification.warning {
+    background: linear-gradient(135deg, #ffc107, #e0a800);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translate(-50%, -100%); /* إظهار الإشعار من الأعلى */
+    }
+    to {
+        transform: translate(-50%, 0); /* توسيط الإشعار */
+    }
+}
+
+/* أنماط زر إعادة تعيين الفرز */
+.btn-info {
+    background: linear-gradient(135deg, #17a2b8, #138496);
+    color: white;
+}
+
+.btn-info:hover {
+    background: linear-gradient(135deg, #138496, #117a8b);
+}
+
+.btn-info i {
+    font-size: 16px;
+}
+
+/* أنماط رأس الصفحة */
+.header-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* السماح للأزرار بالانتقال لسطر جديد على الجوالات */
+}
+
+/* أنماط الأزرار */
+.btn-secondary {
+    background: linear-gradient(135deg, #6c757d, #5a6268);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(135deg, #5a6268, #4a5257);
+}
+
+.btn-info {
+    background: linear-gradient(135deg, #17a2b8, #138496);
+    color: white;
+}
+
+.btn-info:hover {
+    background: linear-gradient(135deg, #138496, #117a8b);
+}
+
+/* أنماط زر إعادة تعيين الفرز */
+.btn-info i {
+    font-size: 16px;
+}
+
+/* أنماط حقل التخصيص */
+.custom-type-input {
+    width: 100px; /* تحديد عرض ثابت للحقل النصي */
+    margin-right: 10px; /* إضافة مسافة بين الحقل النصي والعناصر الأخرى */
+}
+
+/* تحسين تخطيط الصفوف */
+.product-type-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* إضافة مسافة بين العناصر */
+}
+
+/* تحسين عرض الخلايا في الجدول */
+td {
+    white-space: nowrap; /* منع النص من الانتقال لسطر جديد */
+    padding: 10px; /* إضافة مسافة داخل الخلايا */
+}

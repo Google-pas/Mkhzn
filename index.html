@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>إدارة المخزون</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- الخطوط -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <!-- ملف CSS المخصص -->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <!-- زر التبديل بين الوضع الليلي والنهاري -->
+    <button id="darkModeToggle" class="dark-mode-toggle">
+        <i class="fas fa-moon"></i> <!-- أيقونة الهلال -->
+    </button>
+
+    <div class="container">
+        <h1 class="text-center my-4">إدارة المخزون</h1>
+
+        <!-- أزرار التحكم في الفرز -->
+        <div class="header-controls">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    فرز المنتجات
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="sortDropdown">
+                    <li><a class="dropdown-item" href="#" onclick="sortInventory('name')">فرز حسب الاسم</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="sortInventory('quantity')">فرز حسب الكميه</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="sortInventory('bags')">فرز حسب الأكياس</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="sortInventory('location')">فرز حسب المكان</a></li>
+                </ul>
+            </div>
+            <!-- زر إعادة تعيين الفرز بأيقونة -->
+            <button class="btn btn-info" onclick="resetFilter()">
+                <i class="fas fa-sync-alt"></i> <!-- أيقونة إعادة تعيين -->
+            </button>
+        </div>
+
+        <table id="inventoryTable" class="table table-striped table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>اسم المنتج</th>
+                    <th>نوع المنتج</th>
+                    <th>عدد الكميه</th>
+                    <th>عدد الأكياس</th>
+                    <th>رقم الحجم</th>
+                    <th>الموقع</th>
+                    <th>حذف</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- البيانات ستضاف هنا -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- زر نسخ النص العائم -->
+    <button class="floating-btn copy-btn btn btn-success" onclick="copyFinalText()"><i class="fas fa-copy"></i></button>
+    <!-- زر إضافة منتج جديد العائم -->
+    <button class="floating-btn add-btn btn btn-primary" onclick="addProduct()">+</button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- ملف JavaScript المخصص -->
+    <script src="./script.js"></script>
+</body>
+</html>
